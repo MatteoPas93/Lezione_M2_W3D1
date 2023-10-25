@@ -118,7 +118,7 @@ console.log(crazyDiff(60));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const codify = function (stringa) {
-  if (stringa.indexOf("code") === 0) {
+  if (stringa.startsWith("code")) {
     return stringa;
   } else return "code" + stringa;
 };
