@@ -73,7 +73,7 @@ console.log(upperFirst("stringa di prova lettere iniziali maiuscole"));
 
 const giveMeRandom = function (n) {
   const array = [];
-  for (let i = 0; i < n; i++) array.push(Math.floor(Math.random() * 10));
+  for (let i = 0; i < n; i++) array.push(Math.round(Math.random() * 10));
   return array;
 };
 
