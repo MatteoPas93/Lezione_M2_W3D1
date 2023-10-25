@@ -40,8 +40,9 @@ console.log(boundary(10));
 
 const reverseString = function (stringa) {
   return stringa.split("").reverse().join("");
-  //   var newReverseString = "";
-  //   for (var i = stringa.length - 1; i >= 0; i--) {
+ 
+  //   let newReverseString = "";
+  //   for (let i = stringa.length - 1; i >= 0; i--) {
   //     newReverseString += stringa[i];
   //   }
   //   return newReverseString;
@@ -56,12 +57,11 @@ console.log(reverseString("EPICODE"));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const upperFirst = function (letteraMaiuscola) {
-
- let stringa = letteraMaiuscola.split(" ") 
-  for(let i = 0; i < stringa.length; i++) {
-    stringa[i] = stringa[i].charAt(0).toUpperCase() + stringa[i].slice(1)
+  let stringa = letteraMaiuscola.split(" ");
+  for (let i = 0; i < stringa.length; i++) {
+    stringa[i] = stringa[i].charAt(0).toUpperCase() + stringa[i].slice(1);
   }
-  return stringa.join(" ")
+  return stringa.join(" ");
 };
 console.log(upperFirst("stringa di prova lettere iniziali maiuscole"));
 
@@ -118,13 +118,13 @@ console.log(crazyDiff(60));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const codify = function (stringa) {
-  if(stringa.indexOf("code") === 0) {
-    return stringa
-  } else return "code" + stringa
-}
+  if (stringa.indexOf("code") === 0) {
+    return stringa;
+  } else return "code" + stringa;
+};
 
 console.log(codify("frase di prova senza code"));
-console.log(codify("code frase di prova con code"))
+console.log(codify("code frase di prova con code"));
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
