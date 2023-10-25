@@ -56,16 +56,14 @@ console.log(reverseString("EPICODE"));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const upperFirst = function (letteraMaiuscola) {
-  letteraMaiuscola.charAt(0);
-  letteraMaiuscola.split(" ");
-  letteraMaiuscola.toUpperCase();
-  
-  for(let i = 0; i < letteraMaiuscola.length; i++) {
-    console.log(letteraMaiuscola.charAt(0))
-  }
-};
 
-console.log(upperFirst("stringa di prova"));
+ let stringa = letteraMaiuscola.split(" ") 
+  for(let i = 0; i < stringa.length; i++) {
+    stringa[i] = stringa[i].charAt(0).toUpperCase() + stringa[i].slice(1)
+  }
+  return stringa.join(" ")
+};
+console.log(upperFirst("stringa di prova lettere iniziali maiuscole"));
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
@@ -119,9 +117,14 @@ console.log(crazyDiff(60));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const codify = function (stringa) {};
+const codify = function (stringa) {
+  if(stringa.indexOf("code") === 0) {
+    return stringa
+  } else return "code" + stringa
+}
 
-console.log(codify());
+console.log(codify("frase di prova senza code"));
+console.log(codify("code frase di prova con code"))
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
@@ -151,4 +154,4 @@ const cutString = function (parola) {
   return parola.slice(1, parola.length - 1);
 };
 
-console.log(cutString("Frase di prova"));
+console.log(cutString("Frase di prova senza il primo e l'ultimo carattere"));
